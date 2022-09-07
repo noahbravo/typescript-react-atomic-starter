@@ -13,7 +13,7 @@ type BreakpointProps<T, B> = {
 type PrimitivePropsTypes<P, C, B> = {
   [k in keyof P]?: P[k] extends Record<string, string>
     ? keyof P[k] | Array<keyof P[k] | null> | BreakpointProps<keyof P[k], B>
-    : C | Array<keyof P[k] | null> | BreakpointProps<keyof C, B>
+    : C | Array<C | null> | BreakpointProps<C, B>
 }
 
 export interface LayoutAndCSSProps
