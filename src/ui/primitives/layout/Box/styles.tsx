@@ -1,5 +1,14 @@
 import { styled } from '../../../../stitches.config'
-import { display, bgColor, position, positionOptions, zIndex } from '../../../../styles'
+import {
+  display,
+  maxWidth,
+  minHeight,
+  position,
+  positionOptions,
+  zIndex,
+  bgColor,
+  opacity
+} from '../../../../styles'
 
 export const styleAliases = {
   bgColor: 'backgroundColor',
@@ -10,30 +19,30 @@ export const styleAliases = {
 }
 
 const bgSize = {
-  bgAuto: 'auto',
-  bgCover: 'cover',
-  bgContain: 'contain'
+  auto: 'auto',
+  cover: 'cover',
+  contain: 'contain'
 }
 
 const bgPosition = {
-  bgBottom: 'bottom',
-  bgCenter: 'center',
-  bgLeft: 'left',
-  bgLeftBottom: 'left bottom',
-  bgLeftTop: 'left top',
-  bgRight: 'right',
-  bgRightBottom: 'right bottom',
-  bgRightTop: 'right top',
-  bgTop: 'top'
+  bottom: 'bottom',
+  center: 'center',
+  left: 'left',
+  leftBottom: 'left bottom',
+  leftTop: 'left top',
+  right: 'right',
+  rightBottom: 'right bottom',
+  rightTop: 'right top',
+  top: 'top'
 }
 
 const bgRepeat = {
-  bgRepeat: 'repeat',
-  bgNoRepeat: 'no-repeat',
-  bgRepeatX: 'repeat-x',
-  bgRepeatY: 'repeat-y',
-  bgRepeatRound: 'round',
-  bgRepeatSpace: 'space'
+  repeat: 'repeat',
+  noRepeat: 'no-repeat',
+  repeatX: 'repeat-x',
+  repeatY: 'repeat-y',
+  repeatRound: 'round',
+  repeatSpace: 'space'
 }
 
 const customStyleProps = {
@@ -43,13 +52,15 @@ const customStyleProps = {
 }
 
 export const styleProps = {
-  display,
-  bgColor,
+  maxWidth,
+  minHeight,
   position,
   zIndex,
   bgSize,
   bgPosition,
   bgRepeat,
+  bgColor,
+  opacity,
   ...customStyleProps
 } as const
 

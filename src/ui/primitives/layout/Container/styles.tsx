@@ -1,20 +1,16 @@
 import { styled } from '../../../../stitches.config'
-import { display, bgColor, position, positionOptions, zIndex } from '../../../../styles'
+import {
+  display,
+  maxWidth,
+  minHeight,
+  position,
+  positionOptions,
+  zIndex,
+  bgColor
+} from '../../../../styles'
 
 export const styleAliases = {
   bgColor: 'backgroundColor'
-}
-
-const maxWidth = {
-  none: 'none',
-  full: '100%',
-  xl: '80rem' // 1280px
-}
-
-const minHeight = {
-  none: 'none',
-  full: '100%',
-  screen: '100vh'
 }
 
 const customStyleProps = positionOptions
@@ -30,13 +26,13 @@ export const styleProps = {
 } as const
 
 export const variants = {
-  variant: {
-    flexCenter: {
-      display: 'flex',
-      justifyContent: 'center'
-    },
-    marginCenter: {
+  center: {
+    self: {
       margin: '0 auto'
+    },
+    content: {
+      display: 'flex',
+      alignItems: 'center'
     }
   }
 }

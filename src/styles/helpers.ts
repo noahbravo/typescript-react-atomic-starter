@@ -1,18 +1,8 @@
-import { config } from '../stitches.config'
-
-const { theme } = config
-
-type Theme = typeof theme
-type Tokens = { [k in keyof Theme]: keyof Theme[k] }
-
-export function getStylePropsFromTheme(tokenName: keyof typeof theme) {
-  const token = theme[tokenName]
-
-  type TokenType = Tokens[typeof tokenName]
-  type TokenTPropsType = Record<TokenType, string>
+export function getStylePropsFromToken<T>(token: Record<string, string>) {
+  type TokenTPropsType = Record<keyof T, string>
 
   return Object.keys(token).reduce<TokenTPropsType>((acc, key) => {
-    const tokenKey = key as TokenType
+    const tokenKey = key as keyof T
     acc[tokenKey] = `$${key}`
     return acc
   }, {} as TokenTPropsType)

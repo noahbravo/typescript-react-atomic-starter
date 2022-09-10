@@ -5,21 +5,15 @@ import {
   variants as boxVariants
 } from '../Box/styles'
 
+import { variants as ContainerVariants } from '../Container/styles'
+
 export const styleAliases = boxStyleAliases
 
 export const styleProps = boxStyleProps
 
 export const variants = {
   ...boxVariants,
-  center: {
-    self: {
-      margin: '0 auto'
-    },
-    content: {
-      display: 'flex',
-      alignItems: 'center'
-    }
-  }
+  ...ContainerVariants
 }
 
 export const StyledDiv = styled('div', {

@@ -6,19 +6,19 @@ import { styleProps, styleAliases, variants, StyledDiv } from './styles'
 
 interface ContainerProps extends PrimitiveProps<typeof styleProps> {
   children: React.ReactNode
-  variant?: keyof typeof variants.variant
+  center?: keyof typeof variants.center
 }
 
 type PolymorphicContainer = Polymorphic.ForwardRefComponent<'div', ContainerProps>
 
 const Container = React.forwardRef(
-  ({ as = 'div', variant, css, children, ...props }, forwardedRef) => {
+  ({ as = 'div', center, css, children, ...props }, forwardedRef) => {
     const { mediaStyles, restProps } = getformattedProps({ props, styleProps, styleAliases })
 
     return (
       <StyledDiv
         as={as}
-        variant={variant}
+        center={center}
         css={{ ...mediaStyles, ...css }}
         {...restProps}
         ref={forwardedRef}
