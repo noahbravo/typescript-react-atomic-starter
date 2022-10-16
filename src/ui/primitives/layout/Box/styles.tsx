@@ -52,6 +52,7 @@ const customStyleProps = {
 }
 
 export const styleProps = {
+  display,
   maxWidth,
   minHeight,
   position,
