@@ -1,6 +1,6 @@
 import React from 'react'
-import type * as Polymorphic from '@radix-ui/react-polymorphic'
 import type { PrimitiveProps } from '../../types'
+import type { ForwardRefComponent as PolymorphicForwardRefComponent } from '../../../../utils/polymorphic'
 import { getformattedProps } from '../../../../utils/primitives'
 import { styleProps, styleAliases, variants, StyledDiv } from './styles'
 
@@ -11,7 +11,7 @@ interface ContainerProps extends PrimitiveProps<typeof styleProps> {
 
 type PolymorphicContainer = Polymorphic.ForwardRefComponent<'div', ContainerProps>
 
-const Container = React.forwardRef(
+const Container = PolymorphicForwardRefComponent(
   ({ as = 'div', center, css, children, ...props }, forwardedRef) => {
     const { mediaStyles, restProps } = getformattedProps({ props, styleProps, styleAliases })
 
