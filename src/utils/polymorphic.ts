@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-shadow */
-/* eslint-disable no-use-before-define */
-/* eslint-disable @typescript-eslint/ban-types */
 /**
  * This file is originally from `@radix-ui/react-polymorphic` before the package
  * was deprecated. The original source for this lived in the URL below.

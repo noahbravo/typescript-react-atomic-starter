@@ -80,6 +80,15 @@ module.exports = {
       rules: {
         '@typescript-eslint/no-explicit-any': 'off'
       }
+    },
+    {
+      files: ['./src/utils/polymorphic.ts'],
+      rules: {
+        'no-use-before-define': 'off',
+        '@typescript-eslint/ban-types': 'off',
+        '@typescript-eslint/no-shadow': 'off',
+        '@typescript-eslint/no-unused-vars': 'off'
+      }
     }
   ]
 }
