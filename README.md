@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="https://mui.com/" rel="noopener" target="_blank"><img width="80" src="https://github.githubassets.com/images/icons/emoji/electron.png" alt="electron icon"></a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Typescript React Atomic Starter</h1>
+<br>
 
-## Available Scripts
+React and typescript starter built on top of a custom component library inspired by [Chakra UI](https://github.com/chakra-ui/chakra-ui), [Material UI](https://github.com/mui/material-ui) and [Primer React](https://github.com/primer/react).
+This starter comes with a fully customizable react component library and it is structured following the [atomic design principles](https://andela.com/insights/structuring-your-react-application-atomic-design-principles/). The library contains a set pre-configured React Primitive Components, such as `Flex` and `Box`, which can be easily styled by passing props, as also seen in Chakra UI, Materiasl UI and Primer React.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Prettier](https://prettier.io/)
+- [ESLint](https://eslint.org/) with:
+  - [Airbnb config](https://github.com/airbnb/javascript)
+  - [TypeScript](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
+  - [Jest-dom](https://github.com/testing-library/eslint-plugin-jest-dom)
+  - [Prettier](https://github.com/prettier/eslint-config-prettier)
+  - And a few other ES2015+ related rules
+- [Jest](https://jestjs.io) with [DOM Testing Library](https://testing-library.com/docs/dom-testing-library/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/)
+- [axe-core](https://www.npmjs.com/package/@craco/craco)
+- [GitHub Action workflows](https://github.com/features/actions) set up to run tests and linting on push
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Running the app
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+# install dependencies
+npm install
 
-### `npm run build`
+# run in dev mode on port 3000
+npm run start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# generate production build
+npm run build
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Testing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Jest with React Testing Library
 
-### `npm run eject`
+```
+npm run test
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Linting
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+# run linter
+npm run lint
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# fix lint issues
+npm run lint:fix
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## Formatting
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+# run prettier
+npm run format
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
