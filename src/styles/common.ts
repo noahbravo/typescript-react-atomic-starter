@@ -9,7 +9,7 @@ type Colors = typeof colors
 
 export const bgColor = getStylePropsFromToken<Colors>(colors)
 
-export const display = {
+const display = {
   block: 'block',
   'inline-block': 'inline-block',
   inline: 'inline',
@@ -20,7 +20,7 @@ export const display = {
   hidden: 'none'
 }
 
-export const position = {
+const position = {
   static: 'static',
   fixed: 'fixed',
   absolute: 'absolute',
@@ -28,14 +28,14 @@ export const position = {
   sticky: 'sticky'
 }
 
-export const positionOptions = {
+const positionOptions = {
   top: '',
   right: '',
   left: '',
   bottom: ''
 }
 
-export const zIndex = {
+const zIndex = {
   z0: '0',
   z10: '10',
   z20: '20',
@@ -45,7 +45,7 @@ export const zIndex = {
   zAuto: 'auto'
 }
 
-export const maxWidth = {
+const maxWidth = {
   '0': '0rem',
   none: 'none',
   xs: '20rem' /* 320px */,
@@ -65,7 +65,7 @@ export const maxWidth = {
   wFit: 'fit-content'
 }
 
-export const minHeight = {
+const minHeight = {
   '0': '0',
   none: 'none',
   full: '100%',
@@ -75,7 +75,7 @@ export const minHeight = {
   hFit: 'fit-content'
 }
 
-export const opacity = {
+const opacity = {
   '0': '0',
   '5': '0.05',
   '10': '0.1',
@@ -93,27 +93,125 @@ export const opacity = {
   '100': '1'
 }
 
+const pointerEvents = {
+  auto: 'auto',
+  none: 'none'
+}
+
+const textAlign = {
+  left: 'left',
+  center: 'center',
+  right: 'right',
+  justify: 'justify',
+  start: 'start',
+  end: 'end'
+}
+
+const overflow = {
+  auto: 'auto',
+  hidden: 'hidden',
+  clip: 'clip',
+  visible: 'visible',
+  scroll: 'scroll'
+}
+
+const overflowX = overflow
+const overflowY = overflow
+
+const visibility = {
+  visible: 'visible',
+  invisible: 'hidden',
+  collapse: 'collapse'
+}
+
+const gridRow = {
+  auto: 'auto',
+  full: '1 / -1',
+  unset: 'unset',
+  '1': 'span 1 / span 1',
+  '2': 'span 2 / span 2',
+  '3': 'span 3 / span 3',
+  '4': 'span 4 / span 4',
+  '5': 'span 5 / span 5',
+  '6': 'span 6 / span 6'
+}
+
+const gridColumn = {
+  ...gridRow,
+  '7': 'span 7 / span 7',
+  '8': 'span 8 / span 8',
+  '9': 'span 9 / span 9',
+  '10': 'span 10 / span 10',
+  '11': 'span 11 / span 11',
+  '12': 'span 12 / span 12'
+}
+
+const gridRowEnd = {
+  auto: 'auto',
+  unset: 'unset',
+  '1': '1',
+  '2': '2',
+  '3': '3',
+  '4': '4',
+  '5': '5',
+  '6': '6',
+  '7': '7'
+}
+
+const gridColumnEnd = {
+  ...gridRowEnd,
+  '8': '8',
+  '9': '9',
+  '10': '10',
+  '11': '11',
+  '12': '12',
+  '13': '13'
+}
+
+const justifySelf = {
+  auto: 'auto',
+  start: 'start',
+  end: 'end',
+  center: 'center',
+  stretch: 'stretch'
+}
+
+const alignSelf = {
+  auto: 'auto',
+  start: 'flex-start',
+  end: 'flex-end',
+  center: 'center',
+  stretch: 'stretch',
+  baseline: 'baseline'
+}
+
 const grid = {
-  gridColumn: '',
-  gridColumnEnd: '',
-  gridColumnStart: '',
-  gridRow: '',
-  gridRowEnd: '',
-  gridRowStart: '',
-  justifySelf: '',
-  alignSelf: ''
+  gridColumn,
+  gridColumnEnd,
+  gridColumnStart: gridColumnEnd,
+  gridRow,
+  gridRowEnd,
+  gridRowStart: gridRowEnd,
+  justifySelf,
+  alignSelf
+}
+
+const flexGrow = {
+  '0': '0',
+  '1': '1'
 }
 
 const flex = {
   flexBasis: '',
-  flexGrow: '',
-  flexShrink: ''
+  flexGrow,
+  flexShrink: flexGrow
 }
 
 const size = {
   width: '',
   height: '',
-  size: ''
+  size: '',
+  maxHeight: ''
 }
 
 const padding = {
@@ -136,4 +234,25 @@ const margin = {
   marginY: ''
 }
 
-export const layout = { ...margin, ...padding, ...size, ...grid, ...flex }
+export const commonStyleProps = {
+  display,
+  ...grid,
+  ...flex,
+  ...size,
+  maxWidth,
+  minHeight,
+  position,
+  ...positionOptions,
+  zIndex,
+  ...margin,
+  ...padding,
+  opacity,
+  textAlign,
+  overflow,
+  overflowX,
+  overflowY,
+  visibility,
+  transform: '',
+  transition: '',
+  pointerEvents
+}

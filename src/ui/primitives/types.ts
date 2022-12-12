@@ -1,8 +1,12 @@
-import { CSSProperties } from 'react'
-import { breakpoints } from '../../styles'
-import { layout } from '../../styles/common'
+import type { CSSProperties } from 'react'
+import type { breakpoints } from '../../styles'
+import type { commonStyleProps } from '../../styles/common'
 
-export type CSS = CSSProperties | Record<string, CSSProperties>
+export type CSS =
+  | CSSProperties
+  | Record<string, CSSProperties>
+  | Record<string, Record<string, CSSProperties>>
+  | Record<string, Record<string, Record<string, CSSProperties>>>
 
 export type CustomStyleProp = string | number
 
@@ -17,7 +21,7 @@ type PrimitivePropsTypes<P, C, B> = {
 }
 
 export interface LayoutAndCSSProps
-  extends PrimitivePropsTypes<typeof layout, CustomStyleProp, typeof breakpoints> {
+  extends PrimitivePropsTypes<typeof commonStyleProps, CustomStyleProp, typeof breakpoints> {
   css?: CSS
 }
 

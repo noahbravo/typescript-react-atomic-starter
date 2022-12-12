@@ -9,9 +9,9 @@ interface ContainerProps extends PrimitiveProps<typeof styleProps> {
   center?: keyof typeof variants.center
 }
 
-type PolymorphicContainer = Polymorphic.ForwardRefComponent<'div', ContainerProps>
+type PolymorphicContainer = PolymorphicForwardRefComponent<'div', ContainerProps>
 
-const Container = PolymorphicForwardRefComponent(
+const Container = React.forwardRef(
   ({ as = 'div', center, css, children, ...props }, forwardedRef) => {
     const { mediaStyles, restProps } = getformattedProps({ props, styleProps, styleAliases })
 
@@ -28,5 +28,7 @@ const Container = PolymorphicForwardRefComponent(
     )
   }
 ) as PolymorphicContainer
+
+Container.displayName = 'Container'
 
 export { Container }

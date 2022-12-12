@@ -1,14 +1,5 @@
 import { styled } from '../../../../stitches.config'
-import {
-  display,
-  maxWidth,
-  minHeight,
-  position,
-  positionOptions,
-  zIndex,
-  bgColor,
-  opacity
-} from '../../../../styles'
+import { bgColor } from '../../../../styles'
 
 export const styleAliases = {
   bgColor: 'backgroundColor',
@@ -46,22 +37,16 @@ const bgRepeat = {
 }
 
 const customStyleProps = {
+  background: '',
   bgImage: '',
-  borderRadius: '',
-  ...positionOptions
+  borderRadius: ''
 }
 
 export const styleProps = {
-  display,
-  maxWidth,
-  minHeight,
-  position,
-  zIndex,
   bgSize,
   bgPosition,
   bgRepeat,
   bgColor,
-  opacity,
   ...customStyleProps
 } as const
 
