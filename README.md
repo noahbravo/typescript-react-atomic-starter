@@ -1,12 +1,12 @@
 <p align="center">
-  <a href="https://mui.com/" rel="noopener" target="_blank"><img width="80" src="https://github.githubassets.com/images/icons/emoji/electron.png" alt="electron icon"></a>
+  <a href="https://mui.com/" rel="noopener" target="_blank"><img width="60" src="https://github.githubassets.com/images/icons/emoji/electron.png" alt="electron icon"></a>
 </p>
 
 <h1 align="center">Typescript React Atomic Starter</h1>
 <br>
 
 React and typescript starter built on top of a custom component library inspired by [Chakra UI](https://github.com/chakra-ui/chakra-ui), [Material UI](https://github.com/mui/material-ui) and [Primer React](https://github.com/primer/react).
-This starter comes with a fully customizable react component library and it is structured following the [atomic design principles](https://andela.com/insights/structuring-your-react-application-atomic-design-principles/). The library contains a set pre-configured React Primitive Components, such as `Flex` and `Box`, which can be easily styled by passing props, as also seen in Chakra UI, Materiasl UI and Primer React.
+This starter comes with a fully customizable react component library and it is structured following the [atomic design principles](https://andela.com/insights/structuring-your-react-application-atomic-design-principles/). The library contains a set pre-configured react primitive components, such as `Flex` and `Box`, which can be easily styled by passing props, as also seen in Chakra UI, Materiasl UI and Primer React.
 
 ---
 
@@ -59,13 +59,9 @@ npm run lint
 npm run lint:fix
 ```
 
----
-
 ## Formatting
 
 ```
 # run prettier
 npm run format
 ```
-
----

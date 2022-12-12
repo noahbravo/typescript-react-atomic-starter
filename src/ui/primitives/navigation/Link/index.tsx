@@ -1,22 +1,20 @@
 import React from 'react'
-import type { PrimitiveProps } from '../../types'
+import type { LayoutAndCSSProps } from '../../types'
 import { getformattedProps } from '../../../../utils/primitives'
-import { styleProps, StyledLink } from './styles'
+import { StyledLink } from './styles'
 
 const externalLinkProps = {
   rel: 'noopener noreferrer nofollow',
   target: '_blank'
 }
 
-interface LinkProps
-  extends React.AnchorHTMLAttributes<HTMLAnchorElement>,
-    PrimitiveProps<typeof styleProps> {
+interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement>, LayoutAndCSSProps {
   children?: React.ReactNode
   isExternal?: boolean
 }
 
-const Link = ({ children, css, isExternal = true, ...props }: LinkProps) => {
-  const { mediaStyles, restProps } = getformattedProps({ props, styleProps })
+const Link = ({ children, css, isExternal = false, ...props }: LinkProps) => {
+  const { mediaStyles, restProps } = getformattedProps({ props })
 
   return (
     <StyledLink

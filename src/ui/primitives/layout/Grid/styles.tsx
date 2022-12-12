@@ -1,12 +1,20 @@
 import { styled } from '../../../../stitches.config'
-import { position, positionOptions, zIndex } from '../../../../styles'
 
 export const styleAliases = {
+  align: 'alignItems',
   autoColumns: 'gridAutoColumns',
   autoFlow: 'gridAutoFlow',
   autoRows: 'gridAutoRows',
   templateColumns: 'gridTemplateColumns',
   templateRows: 'gridTemplateRows'
+}
+
+const align = {
+  start: 'flex-start',
+  end: 'flex-end',
+  center: 'center',
+  baseline: 'baseline',
+  stretch: 'stretch'
 }
 
 const autoColumns = {
@@ -47,18 +55,16 @@ const templateColumns = {
 }
 
 const customStyleProps = {
-  gap: '',
-  ...positionOptions
+  gap: ''
 }
 
 export const styleProps = {
+  align,
   autoColumns,
   autoFlow,
   autoRows,
   templateColumns,
   templateRows,
-  position,
-  zIndex,
   ...customStyleProps
 } as const
 

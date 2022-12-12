@@ -8,11 +8,24 @@ import type {
   GetFormattedPropsOptions,
   FormatStylesOptions
 } from './types'
-import { breakpoints, toRem, layout } from '../../styles'
+import { breakpoints, toRem, commonStyleProps } from '../../styles'
 
 const breakpointKeys = Object.keys(breakpoints)
 
-const remStyleProps = ['margin', 'padding', 'width', 'height', 'gap']
+const remStyleProps = [
+  'margin',
+  'padding',
+  'width',
+  'height',
+  'maxHeight',
+  'imgWidth',
+  'imgHeight',
+  'gap',
+  'top',
+  'left',
+  'bottom',
+  'right'
+]
 
 export function splitProps(props: PropsType, stylePropsKeys: string[]) {
   const styleProps = {} as StringObject
@@ -98,9 +111,16 @@ export function getMediaStyles(
 }
 
 export function getformattedProps({ props, styleProps, styleAliases }: GetFormattedPropsOptions) {
-  const stylePropsKeys = [...(styleProps ? Object.keys(styleProps) : []), ...Object.keys(layout)]
+  const stylePropsKeys = [
+    ...(styleProps ? Object.keys(styleProps) : []),
+    ...Object.keys(commonStyleProps)
+  ]
   const [componentStyleProps, restProps] = splitProps(props, stylePropsKeys)
-  const mediaStyles = getMediaStyles(componentStyleProps, styleProps, styleAliases)
+  const mediaStyles = getMediaStyles(
+    componentStyleProps,
+    { ...styleProps, ...commonStyleProps },
+    styleAliases
+  )
 
   return { mediaStyles, restProps }
 }

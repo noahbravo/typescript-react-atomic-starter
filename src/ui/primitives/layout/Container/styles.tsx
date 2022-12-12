@@ -1,28 +1,13 @@
 import { styled } from '../../../../stitches.config'
-import {
-  display,
-  maxWidth,
-  minHeight,
-  position,
-  positionOptions,
-  zIndex,
-  bgColor
-} from '../../../../styles'
+import { bgColor } from '../../../../styles'
 
 export const styleAliases = {
   bgColor: 'backgroundColor'
 }
 
-const customStyleProps = positionOptions
-
 export const styleProps = {
-  display,
   bgColor,
-  position,
-  zIndex,
-  maxWidth,
-  minHeight,
-  ...customStyleProps
+  background: ''
 } as const
 
 export const variants = {

@@ -1,9 +1,10 @@
 import { styled } from '../../../../stitches.config'
-import { position, positionOptions, zIndex } from '../../../../styles'
 
 export const styleAliases = {
   align: 'objectPosition',
-  fit: 'objectFit'
+  fit: 'objectFit',
+  imgWidth: 'width',
+  imgHeight: 'height'
 }
 
 const fit = {
@@ -27,16 +28,15 @@ const align = {
 }
 
 const customStyleProps = {
+  borderRadius: '',
   maxWidth: '',
-  maxHeight: '',
-  ...positionOptions
+  imgHeight: '',
+  imgWidth: ''
 }
 
 export const styleProps = {
   align,
   fit,
-  position,
-  zIndex,
   ...customStyleProps
 } as const
 

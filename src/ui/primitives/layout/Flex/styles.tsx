@@ -1,5 +1,4 @@
 import { styled } from '../../../../stitches.config'
-import { position, positionOptions, zIndex } from '../../../../styles'
 
 export const styleAliases = {
   direction: 'flexDirection',
@@ -39,8 +38,7 @@ const wrap = {
 }
 
 const customStyleProps = {
-  gap: '',
-  ...positionOptions
+  gap: ''
 }
 
 export const styleProps = {
@@ -48,23 +46,9 @@ export const styleProps = {
   justify,
   align,
   wrap,
-  position,
-  zIndex,
   ...customStyleProps
 } as const
 
-export const variants = {
-  variant: {
-    list: {
-      display: 'block',
-      '@xl': {
-        display: 'flex'
-      }
-    }
-  }
-}
-
 export const StyledDiv = styled('div', {
-  display: 'flex',
-  variants
+  display: 'flex'
 })
