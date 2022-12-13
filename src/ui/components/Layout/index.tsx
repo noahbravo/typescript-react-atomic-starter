@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from '../../primitives'
+import { Container } from '@elenabravo/bones-ui'
 import Header from './Header'
 import Footer from './Footer'
 

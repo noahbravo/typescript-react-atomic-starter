@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Flex, Box, Img } from '../primitives'
+import { Container, Flex, Box, Img } from '@elenabravo/bones-ui'
 import logo from '../../assets/img/logo.svg'
 import grungepattern from '../../assets/img/grungepattern.png'
 
